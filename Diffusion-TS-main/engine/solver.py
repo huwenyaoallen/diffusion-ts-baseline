@@ -139,31 +139,36 @@ class Trainer(object):
             self.logger.log_info('Sampling done, time: {:.2f}'.format(time.time() - tic))
         return samples
 
-    def restore(self, raw_dataloader, shape=None, coef=1e-1, stepsize=1e-1, sampling_steps=50):
+    def restore(self, raw_dataloader, shape=None, coef=1e-1, stepsize=1e-1, sampling_steps=50, sample_num=100, out_len=24):
         if self.logger is not None:
             tic = time.time()
             self.logger.log_info('Begin to restore...')
         model_kwargs = {}
         model_kwargs['coef'] = coef
         model_kwargs['learning_rate'] = stepsize
-        samples = np.empty([0, shape[0], shape[1]])
-        reals = np.empty([0, shape[0], shape[1]])
-        masks = np.empty([0, shape[0], shape[1]])
+        batched_samples = []
+        batched_reals = []
+        batched_masks = []
 
         for idx, (x, t_m) in enumerate(raw_dataloader):
             x, t_m = x.to(self.device), t_m.to(self.device)
-            if sampling_steps == self.model.num_timesteps:
-                sample = self.ema.ema_model.sample_infill(shape=x.shape, target=x*t_m, partial_mask=t_m,
-                                                          model_kwargs=model_kwargs)
-            else:
-                sample = self.ema.ema_model.fast_sample_infill(shape=x.shape, target=x*t_m, partial_mask=t_m, model_kwargs=model_kwargs,
-                                                               sampling_timesteps=sampling_steps)
+            samples_per_instance = []
+            for j in range(sample_num):
+                if sampling_steps == self.model.num_timesteps:
+                    sample = self.ema.ema_model.sample_infill(shape=x.shape, target=x*t_m, partial_mask=t_m,
+                                                            model_kwargs=model_kwargs)
+                else:
+                    sample = self.ema.ema_model.fast_sample_infill(shape=x.shape, target=x*t_m, partial_mask=t_m, model_kwargs=model_kwargs,
+                                                                sampling_timesteps=sampling_steps)
+                samples_per_instance.append(sample[:, -out_len:, :])
+            samples_per_instance = torch.stack(samples_per_instance, dim=1) # (batch_size, sample_num, seq_len, var_num)
 
-            samples = np.row_stack([samples, sample.detach().cpu().numpy()])
-            reals = np.row_stack([reals, x.detach().cpu().numpy()])
-            masks = np.row_stack([masks, t_m.detach().cpu().numpy()])
+            batched_samples.append(samples_per_instance.detach().cpu().numpy())
+            batched_reals.append(x[:, -out_len:, :].detach().cpu().numpy())
+        all_samples = np.concatenate(batched_samples, axis=0) # (N, sample_num, seq_len, var_num)
+        all_reals = np.concatenate(batched_reals, axis=0) # (N, seq_len, var_num)
         
         if self.logger is not None:
             self.logger.log_info('Imputation done, time: {:.2f}'.format(time.time() - tic))
-        return samples, reals, masks
+        return all_samples, all_reals
         # return samples

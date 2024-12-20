@@ -1,0 +1,365 @@
+==> torch version: 2.3.0+cu118
+==> cudnn version: 8700
+==> Cmd:
+['main.py', '--name', 'etth', '--config_file', './Config/etth.yaml', '--gpu', '1', '--train']
+==> args:
+  config_file: ./Config/etth.yaml
+  cudnn_deterministic: False
+  gpu: 1
+  milestone: 10
+  missing_ratio: 0.0
+  mode: infill
+  name: etth
+  opts: []
+  output: OUTPUT
+  pred_len: 0
+  sample: 0
+  save_dir: OUTPUT/etth
+  seed: 12345
+  tensorboard: False
+  train: True
+==> torch version: 2.3.0+cu118
+==> cudnn version: 8700
+==> Cmd:
+['main.py', '--name', 'etth', '--config_file', './Config/etth.yaml', '--gpu', '1', '--train']
+==> args:
+  config_file: ./Config/etth.yaml
+  cudnn_deterministic: False
+  gpu: 1
+  milestone: 10
+  missing_ratio: 0.0
+  mode: infill
+  name: etth
+  opts: []
+  output: OUTPUT
+  pred_len: 0
+  sample: 0
+  save_dir: OUTPUT/etth
+  seed: 12345
+  tensorboard: False
+  train: True
+==> torch version: 2.3.0+cu118
+==> cudnn version: 8700
+==> Cmd:
+['main.py', '--name', 'etth', '--config_file', './Config/etth.yaml', '--gpu', '1', '--train']
+==> args:
+  config_file: ./Config/etth.yaml
+  cudnn_deterministic: False
+  gpu: 1
+  milestone: 10
+  missing_ratio: 0.0
+  mode: infill
+  name: etth
+  opts: []
+  output: OUTPUT
+  pred_len: 0
+  sample: 0
+  save_dir: OUTPUT/etth
+  seed: 12345
+  tensorboard: False
+  train: True
+==> torch version: 2.3.0+cu118
+==> cudnn version: 8700
+==> Cmd:
+['main.py', '--name', 'etth', '--config_file', './Config/etth.yaml', '--gpu', '1', '--train']
+==> args:
+  config_file: ./Config/etth.yaml
+  cudnn_deterministic: False
+  gpu: 1
+  milestone: 10
+  missing_ratio: 0.0
+  mode: infill
+  name: etth
+  opts: []
+  output: OUTPUT
+  pred_len: 0
+  sample: 0
+  save_dir: OUTPUT/etth
+  seed: 12345
+  tensorboard: False
+  train: True
+==> torch version: 2.3.0+cu118
+==> cudnn version: 8700
+==> Cmd:
+['main.py', '--name', 'etth', '--config_file', './Config/etth.yaml', '--gpu', '1', '--train']
+==> args:
+  config_file: ./Config/etth.yaml
+  cudnn_deterministic: False
+  gpu: 1
+  milestone: 10
+  missing_ratio: 0.0
+  mode: infill
+  name: etth
+  opts: []
+  output: OUTPUT
+  pred_len: 0
+  sample: 0
+  save_dir: OUTPUT/etth
+  seed: 12345
+  tensorboard: False
+  train: True
+==> torch version: 2.3.0+cu118
+==> cudnn version: 8700
+==> Cmd:
+['main.py', '--name', 'etth', '--config_file', './Config/etth.yaml', '--gpu', '1', '--train']
+==> args:
+  config_file: ./Config/etth.yaml
+  cudnn_deterministic: False
+  gpu: 1
+  milestone: 10
+  missing_ratio: 0.0
+  mode: infill
+  name: etth
+  opts: []
+  output: OUTPUT
+  pred_len: 0
+  sample: 0
+  save_dir: OUTPUT/etth
+  seed: 12345
+  tensorboard: False
+  train: True
+==> torch version: 2.3.0+cu118
+==> cudnn version: 8700
+==> Cmd:
+['main.py', '--name', 'etth', '--config_file', './Config/etth.yaml', '--gpu', '1', '--train']
+==> args:
+  config_file: ./Config/etth.yaml
+  cudnn_deterministic: False
+  gpu: 1
+  milestone: 10
+  missing_ratio: 0.0
+  mode: infill
+  name: etth
+  opts: []
+  output: OUTPUT
+  pred_len: 0
+  sample: 0
+  save_dir: OUTPUT/etth
+  seed: 12345
+  tensorboard: False
+  train: True
+==> torch version: 2.3.0+cu118
+==> cudnn version: 8700
+==> Cmd:
+['main.py', '--name', 'etth', '--config_file', './Config/etth.yaml', '--gpu', '1', '--sample', '1', '--milestone', '120', '--mode', 'predict', '--pred_len', '24']
+==> args:
+  config_file: ./Config/etth.yaml
+  cudnn_deterministic: False
+  gpu: 1
+  milestone: 120
+  missing_ratio: 0.0
+  mode: predict
+  name: etth
+  opts: []
+  output: OUTPUT
+  pred_len: 24
+  sample: 1
+  save_dir: OUTPUT/etth
+  seed: 12345
+  tensorboard: False
+  train: False
+==> torch version: 2.3.0+cu118
+==> cudnn version: 8700
+==> Cmd:
+['main.py', '--name', 'etth', '--config_file', './Config/etth.yaml', '--gpu', '1', '--sample', '1', '--milestone', '120', '--mode', 'predict', '--pred_len', '24']
+==> args:
+  config_file: ./Config/etth.yaml
+  cudnn_deterministic: False
+  gpu: 1
+  milestone: 120
+  missing_ratio: 0.0
+  mode: predict
+  name: etth
+  opts: []
+  output: OUTPUT
+  pred_len: 24
+  sample: 1
+  save_dir: OUTPUT/etth
+  seed: 12345
+  tensorboard: False
+  train: False
+==> torch version: 2.3.0+cu118
+==> cudnn version: 8700
+==> Cmd:
+['main.py', '--name', 'etth', '--config_file', './Config/etth.yaml', '--gpu', '1', '--sample', '1', '--milestone', '10', '--mode', 'predict']
+==> args:
+  config_file: ./Config/etth.yaml
+  cudnn_deterministic: False
+  gpu: 1
+  milestone: 10
+  missing_ratio: 0.0
+  mode: predict
+  name: etth
+  opts: []
+  output: OUTPUT
+  pred_len: 0
+  sample: 1
+  save_dir: OUTPUT/etth
+  seed: 12345
+  tensorboard: False
+  train: False
+==> torch version: 2.3.0+cu118
+==> cudnn version: 8700
+==> Cmd:
+['main.py', '--name', 'etth', '--config_file', './Config/etth.yaml', '--gpu', '1', '--sample', '1', '--milestone', '10', '--mode', 'predict']
+==> args:
+  config_file: ./Config/etth.yaml
+  cudnn_deterministic: False
+  gpu: 1
+  milestone: 10
+  missing_ratio: 0.0
+  mode: predict
+  name: etth
+  opts: []
+  output: OUTPUT
+  pred_len: 0
+  sample: 1
+  save_dir: OUTPUT/etth
+  seed: 12345
+  tensorboard: False
+  train: False
+==> torch version: 2.3.0+cu118
+==> cudnn version: 8700
+==> Cmd:
+['main.py', '--name', 'etth', '--config_file', './Config/etth.yaml', '--gpu', '1', '--sample', '1', '--milestone', '10', '--mode', 'predict']
+==> args:
+  config_file: ./Config/etth.yaml
+  cudnn_deterministic: False
+  gpu: 1
+  milestone: 10
+  missing_ratio: 0.0
+  mode: predict
+  name: etth
+  opts: []
+  output: OUTPUT
+  pred_len: 0
+  sample: 1
+  save_dir: OUTPUT/etth
+  seed: 12345
+  tensorboard: False
+  train: False
+==> torch version: 2.3.0+cu118
+==> cudnn version: 8700
+==> Cmd:
+['main.py', '--name', 'etth', '--config_file', './Config/etth.yaml', '--gpu', '1', '--sample', '1', '--milestone', '10', '--mode', 'predict']
+==> args:
+  config_file: ./Config/etth.yaml
+  cudnn_deterministic: False
+  gpu: 1
+  milestone: 10
+  missing_ratio: 0.0
+  mode: predict
+  name: etth
+  opts: []
+  output: OUTPUT
+  pred_len: 0
+  sample: 1
+  save_dir: OUTPUT/etth
+  seed: 12345
+  tensorboard: False
+  train: False
+==> torch version: 2.3.0+cu118
+==> cudnn version: 8700
+==> Cmd:
+['main.py', '--name', 'etth', '--config_file', './Config/etth.yaml', '--gpu', '1', '--sample', '1', '--milestone', '10', '--mode', 'predict', '--sample_num', '2']
+==> args:
+  config_file: ./Config/etth.yaml
+  cudnn_deterministic: False
+  gpu: 1
+  milestone: 10
+  missing_ratio: 0.0
+  mode: predict
+  name: etth
+  opts: []
+  output: OUTPUT
+  pred_len: 0
+  sample: 1
+  sample_num: 2
+  save_dir: OUTPUT/etth
+  seed: 12345
+  tensorboard: False
+  train: False
+==> torch version: 2.3.0+cu118
+==> cudnn version: 8700
+==> Cmd:
+['main.py', '--name', 'etth', '--config_file', './Config/etth.yaml', '--gpu', '1', '--sample', '1', '--milestone', '10', '--mode', 'predict', '--sample_num', '2']
+==> args:
+  config_file: ./Config/etth.yaml
+  cudnn_deterministic: False
+  gpu: 1
+  milestone: 10
+  missing_ratio: 0.0
+  mode: predict
+  name: etth
+  opts: []
+  output: OUTPUT
+  pred_len: 0
+  sample: 1
+  sample_num: 2
+  save_dir: OUTPUT/etth
+  seed: 12345
+  tensorboard: False
+  train: False
+==> torch version: 2.3.0+cu118
+==> cudnn version: 8700
+==> Cmd:
+['main.py', '--name', 'etth', '--config_file', './Config/etth.yaml', '--gpu', '1', '--sample', '1', '--milestone', '10', '--mode', 'predict', '--sample_num', '2']
+==> args:
+  config_file: ./Config/etth.yaml
+  cudnn_deterministic: False
+  gpu: 1
+  milestone: 10
+  missing_ratio: 0.0
+  mode: predict
+  name: etth
+  opts: []
+  output: OUTPUT
+  pred_len: 0
+  sample: 1
+  sample_num: 2
+  save_dir: OUTPUT/etth
+  seed: 12345
+  tensorboard: False
+  train: False
+==> torch version: 2.3.0+cu118
+==> cudnn version: 8700
+==> Cmd:
+['main.py', '--name', 'etth', '--config_file', './Config/etth.yaml', '--gpu', '1', '--train']
+==> args:
+  config_file: ./Config/etth.yaml
+  cudnn_deterministic: False
+  gpu: 1
+  milestone: 10
+  missing_ratio: 0.0
+  mode: infill
+  name: etth
+  opts: []
+  output: OUTPUT
+  pred_len: 0
+  sample: 0
+  sample_num: 1
+  save_dir: OUTPUT/etth
+  seed: 12345
+  tensorboard: False
+  train: True
+==> torch version: 2.3.0+cu118
+==> cudnn version: 8700
+==> Cmd:
+['main.py', '--name', 'etth', '--config_file', './Config/etth.yaml', '--gpu', '1', '--sample', '1', '--milestone', '10', '--mode', 'predict', '--sample_num', '100']
+==> args:
+  config_file: ./Config/etth.yaml
+  cudnn_deterministic: False
+  gpu: 1
+  milestone: 10
+  missing_ratio: 0.0
+  mode: predict
+  name: etth
+  opts: []
+  output: OUTPUT
+  pred_len: 0
+  sample: 1
+  sample_num: 100
+  save_dir: OUTPUT/etth
+  seed: 12345
+  tensorboard: False
+  train: False

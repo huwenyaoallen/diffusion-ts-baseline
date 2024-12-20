@@ -1,0 +1,69 @@
+dataloader:
+  batch_size: 128
+  sample_size: 256
+  shuffle: true
+  test_dataset:
+    coefficient: 0.01
+    params:
+      data_root: ./Data/datasets/ETTh.csv
+      distribution: geometric
+      name: etth
+      neg_one_to_one: true
+      period: test
+      proportion: 0.9
+      save2npy: true
+      seed: 123
+      style: separate
+      window: 24
+    sampling_steps: 200
+    step_size: 0.05
+    target: Utils.Data_utils.real_datasets.CustomDataset
+  train_dataset:
+    params:
+      data_root: ./Data/datasets/ETTh.csv
+      name: etth
+      neg_one_to_one: true
+      period: train
+      proportion: 1.0
+      save2npy: true
+      seed: 123
+      window: 24
+    target: Utils.Data_utils.real_datasets.CustomDataset
+model:
+  params:
+    attn_pd: 0.0
+    beta_schedule: cosine
+    d_model: 64
+    feature_size: 7
+    kernel_size: 1
+    loss_type: l1
+    mlp_hidden_times: 4
+    n_heads: 4
+    n_layer_dec: 2
+    n_layer_enc: 3
+    padding_size: 0
+    resid_pd: 0.0
+    sampling_timesteps: 500
+    seq_length: 24
+    timesteps: 500
+  target: Models.interpretable_diffusion.gaussian_diffusion.Diffusion_TS
+solver:
+  base_lr: 1.0e-05
+  ema:
+    decay: 0.995
+    update_interval: 10
+  gradient_accumulate_every: 2
+  max_epochs: 18000
+  results_folder: ./Checkpoints_etth
+  save_cycle: 1800
+  scheduler:
+    params:
+      factor: 0.5
+      min_lr: 1.0e-05
+      patience: 4000
+      threshold: 0.1
+      threshold_mode: rel
+      verbose: false
+      warmup: 500
+      warmup_lr: 0.0008
+    target: engine.lr_sch.ReduceLROnPlateauWithWarmup

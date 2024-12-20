@@ -1,0 +1,40 @@
+==> torch version: 2.3.0+cu118
+==> cudnn version: 8700
+==> Cmd:
+['main.py', '--name', 'ETTh1', '--config_file', './Config/etth.yaml', '--gpu', '0', '--train']
+==> args:
+  config_file: ./Config/etth.yaml
+  cudnn_deterministic: False
+  gpu: 0
+  milestone: 10
+  missing_ratio: 0.0
+  mode: infill
+  name: ETTh1
+  opts: []
+  output: OUTPUT
+  pred_len: 0
+  sample: 0
+  save_dir: OUTPUT/ETTh1
+  seed: 12345
+  tensorboard: False
+  train: True
+==> torch version: 2.3.0+cu118
+==> cudnn version: 8700
+==> Cmd:
+['main.py', '--name', 'ETTh1', '--config_file', './Config/etth.yaml', '--gpu', '1', '--train']
+==> args:
+  config_file: ./Config/etth.yaml
+  cudnn_deterministic: False
+  gpu: 1
+  milestone: 10
+  missing_ratio: 0.0
+  mode: infill
+  name: ETTh1
+  opts: []
+  output: OUTPUT
+  pred_len: 0
+  sample: 0
+  save_dir: OUTPUT/ETTh1
+  seed: 12345
+  tensorboard: False
+  train: True

@@ -41,6 +41,7 @@ def parse_args():
 
     parser.add_argument('--missing_ratio', type=float, default=0., help='Ratio of Missing Values.')
     parser.add_argument('--pred_len', type=int, default=0, help='Length of Predictions.')
+    parser.add_argument('--sample_num', type=int, default=1, help='Number of Samples.')
     
     # args for modify config
     parser.add_argument('opts', help='Modify config options using the command-line',
@@ -80,11 +81,9 @@ def main():
         coef = config['dataloader']['test_dataset']['coefficient']
         stepsize = config['dataloader']['test_dataset']['step_size']
         sampling_steps = config['dataloader']['test_dataset']['sampling_steps']
-        samples, *_ = trainer.restore(dataloader, [dataset.window, dataset.var_num], coef, stepsize, sampling_steps)
-        if dataset.auto_norm:
-            samples = unnormalize_to_zero_to_one(samples)
-            # samples = dataset.scaler.inverse_transform(samples.reshape(-1, samples.shape[-1])).reshape(samples.shape)
+        samples, reals = trainer.restore(dataloader, [dataset.window, dataset.var_num], coef, stepsize, sampling_steps, args.sample_num, dataset.out_len)
         np.save(os.path.join(args.save_dir, f'ddpm_{args.mode}_{args.name}.npy'), samples)
+        np.save(os.path.join(args.save_dir, f'ddpm_{args.mode}_{args.name}_real.npy'), reals)
     else:
         trainer.load(args.milestone)
         dataset = dataloader_info['dataset']

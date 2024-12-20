@@ -26,10 +26,10 @@ def build_dataloader(config, args=None):
 def build_dataloader_cond(config, args=None):
     batch_size = config['dataloader']['sample_size']
     config['dataloader']['test_dataset']['params']['output_dir'] = args.save_dir
-    if args.mode == 'infill':
-        config['dataloader']['test_dataset']['params']['missing_ratio'] = args.missing_ratio
-    elif args.mode == 'predict':
-        config['dataloader']['test_dataset']['params']['predict_length'] = args.pred_len
+    # if args.mode == 'infill':
+    #     config['dataloader']['test_dataset']['params']['missing_ratio'] = args.missing_ratio
+    # elif args.mode == 'predict':
+    #     config['dataloader']['test_dataset']['params']['predict_length'] = args.pred_len
     test_dataset = instantiate_from_config(config['dataloader']['test_dataset'])
 
     dataloader = torch.utils.data.DataLoader(test_dataset,

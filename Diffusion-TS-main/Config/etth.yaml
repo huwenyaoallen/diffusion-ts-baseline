@@ -1,7 +1,7 @@
 model:
   target: Models.interpretable_diffusion.gaussian_diffusion.Diffusion_TS
   params:
-    seq_length: 24
+    seq_length: 120 # 96 + 24
     feature_size: 7
     n_layer_enc: 3
     n_layer_dec: 2
@@ -44,11 +44,10 @@ dataloader:
     target: Utils.Data_utils.real_datasets.CustomDataset
     params:
       name: etth
-      proportion: 1.0  # Set to rate < 1 if training conditional generation
-      data_root: ./Data/datasets/ETTh.csv
-      window: 24  # seq_length
+      data_root: ../../Patch-Diffusion-working/datasets/ETTh1.csv
+      in_len: 96
+      out_len: 24
       save2npy: True
-      neg_one_to_one: True
       seed: 123
       period: train
 
@@ -56,19 +55,16 @@ dataloader:
     target: Utils.Data_utils.real_datasets.CustomDataset
     params:
       name: etth
-      proportion: 0.9  # rate
-      data_root: ./Data/datasets/ETTh.csv
-      window: 24  # seq_length
+      data_root: ../../Patch-Diffusion-working/datasets/ETTh1.csv
+      in_len: 96
+      out_len: 24
       save2npy: True
-      neg_one_to_one: True
       seed: 123
       period: test
-      style: separate
-      distribution: geometric
     coefficient: 1.0e-2
     step_size: 5.0e-2
-    sampling_steps: 200
+    sampling_steps: 20
 
   batch_size: 128
-  sample_size: 256
+  sample_size: 1
   shuffle: True
